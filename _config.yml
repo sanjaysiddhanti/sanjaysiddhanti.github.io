@@ -1,6 +1,7 @@
 # Site settings
 title:       Sanjay Siddhanti
 author:      Sanjay Siddhanti
+description: ""
 baseurl:     ""
 url:         "http://www.sanjaysiddhanti.com"
 date_format: "%b %-d, %Y"
