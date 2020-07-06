@@ -55,7 +55,7 @@ I recommend using `exclude` to keep the size of your archive down. Zappa support
 
 Most web apps don't exist in isolation; they need to talk to other services, such as a database, and need to store secrets to do this. If you have a small number of secrets that don't change often, the most straightforward approach is to [set them in the Lambda console](https://github.com/Miserlou/Zappa#remote-environment-variables).
 
-![Lambda console](/Users/Sanjay/Documents/projects/sanjaysiddhanti.github.io/images/envvar.png)
+![Lambda console](/images/envvar.png)
 
 This makes the values available in the Lambda runtime environment, so you can read them into your application like normal:
 
@@ -103,11 +103,11 @@ There are [many guides](https://dev.to/oyetoket/how-to-deploy-your-frontend-appl
 
 ### Server side rendering
 
-Single page applications (SPAs) typically send the client a Javascript bundle that creates the HTML for the app. Since not all web crawlers can execute Javascript code, the crawlers only see a barebones HTML page that says "load App.js". This means websites thata rendered exclusively on the client will struggle with SEO, since search engines cannot index all of their content.
+Single page applications (SPAs) typically send the client a Javascript bundle that creates the HTML for the app. Since not all web crawlers can execute Javascript code, the crawlers only see a barebones HTML page that says "load App.js". This means websites that are rendered exclusively on the client will struggle with SEO, since search engines cannot index all of their content.
 
 To improve this people use server-side rendering (SSR), where some or all of the HTML is rendered on the server. This makes the site SEO-friendly and faster for the initial page load.
 
-Server-side rendering *usually* means you need a Node.js backend that can execute JavaScript code. While it looks possible to do [SSR with a Python backend](https://github.com/markfinger/python-react), I'm not sure if Lambda gives you enough control to set that up. You should investigate more before commiting down this path.
+Server-side rendering *usually* means you need a Node.js backend that can execute JavaScript code. While it looks possible to do [SSR with a Python backend](https://github.com/markfinger/python-react), I'm not sure if Lambda gives you enough control to set that up. You should investigate more before committing down this path.
 
 ### Client side routing
 
